@@ -231,8 +231,6 @@
              await pageOnboard.bringToFront(),
              console.log("==> Refocus on BE page after 3 seconds"),
 
-
-             console.log("==> Exiting password safe page."),
              await pageOnboard.waitForSelector(exitPassSafePage),
              console.log("==> Click X to return to password entry page."),
              await pageOnboard.waitForTimeout(1000),
