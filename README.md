@@ -35,7 +35,7 @@ npm i
 *Tests are output in the console.*
 
 
-### Connect to existing session
+### Connect to existing session (⏰ Work in progress, will complete if moving forward with puppeteer)
 
 1. Install nodejs or ensure it is up to date on your machine.
 
