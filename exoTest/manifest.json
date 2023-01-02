@@ -1,0 +1,128 @@
+{
+  "description": "Exodus unifies Web3 by providing best-in-class, non-custodial, and multi-chain support–from Solana to Ethereum and beyond.",
+  "version": "22.12.16",
+  "manifest_version": 3,
+  "homepage_url": "https://www.exodus.com",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "alarms",
+    "tabs"
+  ],
+  "minimum_chrome_version": "100",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html?scaletofit=true&isPopup=true",
+    "default_title": "Exodus",
+    "default_icon": {
+      "16": "assets/png/icon_red_16x16.png",
+      "32": "assets/png/icon_red_32x32.png",
+      "128": "assets/png/icon_red_128x128.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Open Exodus"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*",
+        "http://[::1]/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "content.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://apeswap.finance/*",
+        "https://app.aave.com/*",
+        "https://app.aavegotchi.com/*",
+        "https://app.balancer.fi/*",
+        "https://app.benqi.fi/*",
+        "https://app.dodoex.io/*",
+        "https://app.ens.domains/*",
+        "https://app.hop.exchange/*",
+        "https://app.uniswap.org/*",
+        "https://audius.co/*",
+        "https://www.convexfinance.com/*",
+        "https://dappradar.com/*",
+        "https://galxe.com/*",
+        "https://app.gmx.io/*",
+        "https://homora.alphaventuredao.io/*",
+        "https://joepegs.com/*",
+        "https://magiceden.io/*",
+        "https://www.mugenswap.xyz/*",
+        "https://opensea.io/*",
+        "https://pancakeswap.finance/*",
+        "https://app.pangolin.exchange/*",
+        "https://www.penguinfinance.org/*",
+        "https://planetix.com/*",
+        "https://quickswap.exchange/*",
+        "https://shibaswap.com/*",
+        "https://stargate.finance/*",
+        "https://swap.cow.fi/*",
+        "https://trade.dydx.exchange/*",
+        "https://traderjoexyz.com/*",
+        "https://www.launchmynft.io/*",
+        "https://www.sandbox.game/*",
+        "https://www.sushi.com/*",
+        "https://wallet.polygon.technology/*",
+        "https://wallet-beta.polygon.technology/*"
+      ],
+      "run_at": "document_start",
+      "css": [
+        "connect-banner.css"
+      ],
+      "js": [
+        "content-connect-banner.js"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; form-action 'none'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https: wss: data: blob:",
+    "sandbox": "sandbox default-src 'self'; form-action 'none'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https: wss: data: blob:"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*",
+        "http://[::1]/*"
+      ],
+      "resources": [
+        "assets/fonts/rubik/Rubik-Light.ttf",
+        "assets/fonts/rubik/Rubik-Medium.ttf",
+        "assets/fonts/rubik/Rubik-Regular.ttf",
+        "assets/png/logo.png",
+        "assets/png/icon_white.png",
+        "assets/png/banner-bg-right.png",
+        "algorand-provider.js",
+        "cardano-provider.js",
+        "solana-provider.js",
+        "inapp.js",
+        "connect-banner.js",
+        "sell-crypto.html",
+        "sell-crypto.js"
+      ]
+    }
+  ],
+  "name": "Exodus (Nile)",
+  "short_name": "Exodus (Nile)",
+  "icons": {
+    "16": "assets/png/icon_red_16x16.png",
+    "32": "assets/png/icon_red_32x32.png",
+    "128": "assets/png/icon_red_128x128.png"
+  }
+}

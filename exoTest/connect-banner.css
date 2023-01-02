@@ -1,0 +1,139 @@
+.exodus-connect-banner__body--margin {
+  margin-top: 96px;
+}
+
+.exodus-connect-banner__body--margin > .exodus-connect-banner__container {
+  top: 0px;
+}
+
+.exodus-connect-banner__body--transform {
+  overflow: visible !important;
+  transform: translateY(96px);
+}
+
+.exodus-connect-banner__body--transform > .exodus-connect-banner__container {
+  top: -96px;
+}
+
+.exodus-connect-banner__container {
+  align-items: center;
+  background: linear-gradient(90deg, #212442 0%, #16172b 100%);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 577px 100%, 100% 100%;
+  display: flex;
+  height: 96px;
+  justify-content: center;
+  max-width: 100vw;
+  overflow: hidden;
+  padding: 0 24px;
+  position: absolute;
+  width: 100%;
+  z-index: 2147483647; /* maximum cross-browser z-index value */
+  -webkit-font-smoothing: antialiased;
+}
+
+.exodus-connect-banner__container::before {
+  background: linear-gradient(90deg, #00bfff 0%, #6619ff 100%);
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.exodus-connect-banner__content {
+  position: relative;
+  column-gap: 16px;
+  display: grid;
+  grid-template-columns: 40px 1fr 216px;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  max-width: 800px;
+  width: 100%;
+}
+
+.exodus-connect-banner__logo {
+  align-self: center;
+  grid-column: 1 / 1;
+  grid-row: 1 / span 2;
+  height: 40px;
+  width: 40px;
+}
+
+.exodus-connect-banner__title {
+  align-self: end;
+  color: #ffffff;
+  font-family: 'Rubik' !important;
+  font-size: 24px;
+  font-weight: 300;
+  grid-column: 2 / 2;
+  grid-row: 1 / 1;
+  line-height: 1;
+  margin: 0;
+  padding: 0 !important;
+  text-decoration: none !important;
+}
+
+.exodus-connect-banner__subtitle {
+  align-self: start;
+  color: #ffffff;
+  font-family: 'Rubik' !important;
+  font-size: 12px;
+  font-weight: 400;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  line-height: 1;
+  margin: 8px 0 0;
+  opacity: 0.5;
+}
+
+.exodus-connect-banner__connect-button {
+  align-items: center;
+  align-self: center;
+  background-image: linear-gradient(90deg, #00bfff 0%, #6619ff 100%) !important;
+  border-radius: 22px;
+  border: none;
+  box-shadow: 0px 8px 16px rgba(50, 111, 255, 0.3) !important;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Rubik';
+  font-size: 12px;
+  font-weight: 500;
+  grid-column: 3 / 3;
+  grid-row: 1 / span 2;
+  height: 44px;
+  justify-content: center;
+  opacity: 0.9 !important;
+  padding: 0 40px;
+  text-transform: uppercase;
+  transition: opacity 200ms ease;
+  width: 100%;
+}
+
+.exodus-connect-banner__connect-button:hover {
+  background-image: linear-gradient(90deg, #00bfff 0%, #6619ff 100%) !important;
+  box-shadow: 0px 8px 16px rgba(50, 111, 255, 0.3) !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.exodus-connect-banner__connect-button:focus,
+.exodus-connect-banner__connect-button:focus-visible {
+  outline: none !important;
+}
+
+.exodus-connect-banner__connect-button > img {
+  height: 20px;
+  margin-right: 8px;
+  width: 20px;
+}
+
+@media (max-width: 800px) {
+  .exodus-connect-banner__content {
+    grid-template-columns: 40px 1fr 184px;
+    max-width: 100%;
+  }
+}
