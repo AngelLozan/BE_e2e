@@ -1,6 +1,6 @@
 # Exodus Browser Extension Automation Demo
 
-![Browser Extension Picture](https://github.com/AngelLozan/BE_Automation/blob/main/browser.png?raw=true)
+![Browser Extension Picture](https://github.com/AngelLozan/BE_e2e/blob/main/browser.png?raw=true)
 
 A repository to demonstrate the capabilities of browser extension automation for the Exodus Wallet browser extension QA team. 
 
