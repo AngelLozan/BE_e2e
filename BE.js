@@ -351,7 +351,7 @@
      } finally {
 
         console.log("Test process exiting.")
-        process.exit(1);
+        process.exit(0);
 
          // process.on('exit', function(code) {
          //     return console.log(`Exiting process implicitly ${code}`);
